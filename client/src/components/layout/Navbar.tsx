@@ -51,7 +51,7 @@ export function Navbar() {
       <div className="container mx-auto flex items-center justify-between px-6 lg:px-12">
         <div className="flex items-center gap-4 cursor-pointer" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
           <img src={logo} alt="Harbor City" className="h-10 w-auto mix-blend-multiply" />
-          <div className="hidden sm:block">
+          <div className="block">
             <span className="block text-sm font-bold tracking-[0.3em] uppercase leading-none">Harbor City</span>
             <span className="block text-[10px] tracking-[0.4em] uppercase text-secondary font-medium mt-1">Event Staffing</span>
           </div>
