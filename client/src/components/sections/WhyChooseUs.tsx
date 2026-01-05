@@ -54,8 +54,8 @@ export function WhyChooseUs() {
                     HC
                   </div>
                   <div>
-                    <p className="font-bold text-white tracking-widest uppercase text-xs">The Director</p>
-                    <p className="text-secondary text-xs mt-1 uppercase tracking-widest">Harbor City Standard</p>
+                    <p className="font-bold text-white tracking-widest uppercase text-xs">Alexander Vance</p>
+                    <p className="text-secondary text-xs mt-1 uppercase tracking-widest">Director of Operations</p>
                   </div>
                 </div>
              </div>
