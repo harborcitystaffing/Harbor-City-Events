@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { useState, useEffect } from "react";
-import logo from "@assets/Screenshot_2026-01-03_at_11.17.59_PM_1767585508261.jpeg";
+import logo from "@assets/generated_images/minimalist_luxury_event_staffing_logo.png";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -24,8 +24,8 @@ export function Navbar() {
 
   const NavLinks = ({ mobile = false, closeMenu }: { mobile?: boolean; closeMenu?: () => void }) => {
     const baseClass = mobile 
-      ? "flex flex-col space-y-4 text-lg font-medium text-primary" 
-      : "flex space-x-8 text-sm font-medium text-white/90 hover:text-white transition-colors";
+      ? "flex flex-col space-y-8 text-2xl font-serif text-primary" 
+      : "flex space-x-10 text-xs uppercase tracking-[0.2em] font-medium text-primary/70 hover:text-primary transition-all";
 
     const handleClick = (id: string) => {
       scrollToSection(id);
@@ -34,54 +34,67 @@ export function Navbar() {
 
     return (
       <div className={baseClass}>
-        <button onClick={() => handleClick("services")} className="hover:text-secondary transition-colors text-left">Services</button>
-        <button onClick={() => handleClick("why-us")} className="hover:text-secondary transition-colors text-left">Why Us</button>
-        <button onClick={() => handleClick("process")} className="hover:text-secondary transition-colors text-left">How It Works</button>
-        <button onClick={() => handleClick("contact")} className="hover:text-secondary transition-colors text-left">Contact</button>
+        <button onClick={() => handleClick("services")} className="hover:text-secondary transition-colors text-left cursor-pointer">Services</button>
+        <button onClick={() => handleClick("why-us")} className="hover:text-secondary transition-colors text-left cursor-pointer">Philosophy</button>
+        <button onClick={() => handleClick("process")} className="hover:text-secondary transition-colors text-left cursor-pointer">Process</button>
+        <button onClick={() => handleClick("contact")} className="hover:text-secondary transition-colors text-left cursor-pointer">Inquire</button>
       </div>
     );
   };
 
   return (
     <nav 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-primary/95 backdrop-blur-sm shadow-md py-4" : "bg-transparent py-6"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
+        isScrolled ? "bg-white/80 backdrop-blur-md py-4 border-b border-primary/5 shadow-sm" : "bg-transparent py-8"
       }`}
     >
-      <div className="container mx-auto flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          {/* Logo */}
-          <img src={logo} alt="Harbor City Event Staff" className={`h-12 w-auto brightness-0 invert`} />
+      <div className="container mx-auto flex items-center justify-between px-6 lg:px-12">
+        <div className="flex items-center gap-4 cursor-pointer" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
+          <img src={logo} alt="Harbor City" className="h-10 w-auto mix-blend-multiply" />
+          <div className="hidden sm:block">
+            <span className="block text-sm font-bold tracking-[0.3em] uppercase leading-none">Harbor City</span>
+            <span className="block text-[10px] tracking-[0.4em] uppercase text-secondary font-medium mt-1">Event Staffing</span>
+          </div>
         </div>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-12">
           <NavLinks />
           <Button 
             onClick={() => scrollToSection("contact")}
-            className="bg-secondary text-primary hover:bg-white hover:text-primary font-semibold rounded-none px-6"
+            className="bg-primary text-white hover:bg-secondary hover:text-primary transition-all duration-500 rounded-none px-8 py-6 text-xs uppercase tracking-widest font-bold"
           >
-            Request a Quote
+            Request Quote
           </Button>
         </div>
 
         {/* Mobile Nav */}
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="text-white">
-                <Menu className="h-6 w-6" />
+              <Button variant="ghost" size="icon" className="text-primary hover:bg-transparent">
+                <div className="flex flex-col gap-1.5 items-end">
+                  <div className="h-0.5 w-8 bg-primary"></div>
+                  <div className="h-0.5 w-5 bg-secondary"></div>
+                  <div className="h-0.5 w-8 bg-primary"></div>
+                </div>
               </Button>
             </SheetTrigger>
-            <SheetContent>
-              <div className="mt-8">
-                <NavLinks mobile closeMenu={() => {}} />
-                <Button 
-                  onClick={() => scrollToSection("contact")}
-                  className="w-full mt-6 bg-primary text-white hover:bg-primary/90"
-                >
-                  Request a Quote
-                </Button>
+            <SheetContent side="right" className="w-full sm:w-[400px] border-none bg-white p-12">
+              <div className="flex flex-col h-full justify-between">
+                <div className="mt-12">
+                  <NavLinks mobile closeMenu={() => {}} />
+                </div>
+                <div className="space-y-8">
+                  <div className="h-px w-full bg-primary/10"></div>
+                  <p className="text-xs tracking-widest uppercase text-muted-foreground">New York Metropolitan Area</p>
+                  <Button 
+                    onClick={() => scrollToSection("contact")}
+                    className="w-full bg-primary text-white py-8 rounded-none text-sm uppercase tracking-widest font-bold"
+                  >
+                    Request a Quote
+                  </Button>
+                </div>
               </div>
             </SheetContent>
           </Sheet>

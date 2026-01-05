@@ -26,39 +26,47 @@ const services = [
 
 export function Services() {
   return (
-    <section id="services" className="py-24 bg-white">
-      <div className="container mx-auto">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">Our Premium Services</h2>
-          <p className="text-muted-foreground text-lg">
-            We provide a full range of hospitality staffing solutions tailored to the unique needs of your event.
+    <section id="services" className="py-32 bg-white relative overflow-hidden">
+      {/* Decorative Elements */}
+      <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-primary/[0.02] -skew-x-12 transform translate-x-1/2 -translate-y-1/2" />
+      
+      <div className="container mx-auto px-6">
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-24 gap-8">
+          <div className="max-w-2xl">
+            <span className="text-secondary font-bold tracking-[0.3em] uppercase text-xs mb-4 block">Our Expertise</span>
+            <h2 className="text-4xl md:text-6xl font-serif text-primary leading-tight">Elevated Service <br />Standards.</h2>
+          </div>
+          <p className="text-muted-foreground text-lg max-w-md italic font-light">
+            "Hospitality is not a task, it's a performance. We curate the cast for your event's success."
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-primary/5 border border-primary/5">
           {services.map((service, index) => (
-            <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-lg overflow-hidden group">
-              <div className="h-2 bg-secondary w-full" />
-              <CardHeader className="pt-8 pb-4 text-center">
-                <div className="mx-auto w-16 h-16 bg-primary/5 rounded-full flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-secondary transition-colors duration-300">
-                  <service.icon className="w-8 h-8 text-primary group-hover:text-secondary transition-colors duration-300" />
-                </div>
-                <CardTitle className="text-xl font-bold text-primary">{service.title}</CardTitle>
-              </CardHeader>
-              <CardContent className="text-center text-muted-foreground pb-8 px-6">
-                <p>{service.description}</p>
-              </CardContent>
-            </Card>
+            <div key={index} className="bg-white p-12 lg:p-20 group hover:bg-primary transition-all duration-700 relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-1 h-0 bg-secondary group-hover:h-full transition-all duration-700" />
+              <div className="relative z-10">
+                <service.icon className="w-12 h-12 text-secondary mb-10 group-hover:scale-110 transition-transform duration-500" />
+                <h3 className="text-3xl font-serif text-primary mb-6 group-hover:text-white transition-colors">{service.title}</h3>
+                <p className="text-muted-foreground group-hover:text-white/70 transition-colors leading-relaxed text-lg font-light">
+                  {service.description}
+                </p>
+              </div>
+            </div>
           ))}
         </div>
         
-        <div className="mt-16 text-center">
-             <div className="inline-block bg-primary/5 border border-primary/10 rounded-lg p-6">
-                 <p className="text-primary font-medium text-lg">
-                    Pricing starts at <span className="text-secondary font-bold font-heading text-xl">$45/hr</span> per staff member.
-                 </p>
-                 <p className="text-sm text-muted-foreground mt-1">Minimum hours apply. Custom quotes available for large events.</p>
-             </div>
+        <div className="mt-32 flex flex-col lg:flex-row items-center justify-between border-t border-primary/5 pt-12 gap-8">
+          <div className="flex items-baseline gap-4">
+            <span className="text-5xl font-serif text-primary">45</span>
+            <div className="flex flex-col">
+              <span className="text-xs uppercase tracking-widest font-bold text-secondary">Starting at</span>
+              <span className="text-sm font-medium text-muted-foreground">$ / per hour</span>
+            </div>
+          </div>
+          <p className="text-sm text-muted-foreground uppercase tracking-[0.2em] font-medium text-center lg:text-right">
+            Custom investment proposals crafted for significant occasions.
+          </p>
         </div>
       </div>
     </section>

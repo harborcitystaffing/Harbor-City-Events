@@ -4,6 +4,7 @@
 
 @theme {
   --font-sans: "Inter", system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
   --font-heading: "Montserrat", system-ui, sans-serif;
   
   --color-border: hsl(var(--border));
@@ -36,72 +37,56 @@
   --radius-lg: var(--radius);
   --radius-md: calc(var(--radius) - 2px);
   --radius-sm: calc(var(--radius) - 4px);
-
-  --animate-accordion-down: accordion-down 0.2s ease-out;
-  --animate-accordion-up: accordion-up 0.2s ease-out;
-
-  @keyframes accordion-down {
-    from { height: 0; }
-    to { height: var(--radix-accordion-content-height); }
-  }
-  @keyframes accordion-up {
-    from { height: var(--radix-accordion-content-height); }
-    to { height: 0; }
-  }
-}
-
-@utility container {
-  margin-inline: auto;
-  padding-inline: 2rem;
-  @media (width >= --theme(--breakpoint-sm)) {
-    max-width: none;
-  }
-  @media (width >= 1400px) {
-    max-width: 1400px;
-  }
 }
 
 :root {
-  /* Navy Blue Primary - Deep, authoritative, professional */
-  --primary: 220 35% 15%; /* #192133 */
+  --primary: 222 47% 11%;
   --primary-foreground: 0 0% 100%;
 
-  /* Subtle Gold Accent - Elegant, not gaudy */
-  --secondary: 42 45% 65%; /* #ccb37a */
-  --secondary-foreground: 220 35% 15%;
+  --secondary: 43 50% 60%;
+  --secondary-foreground: 222 47% 11%;
 
-  /* Clean White Background */
   --background: 0 0% 100%;
-  --foreground: 220 35% 15%; /* Dark navy text instead of pure black for harmony */
+  --foreground: 222 47% 11%;
 
-  --card: 0 0% 98%;
-  --card-foreground: 220 35% 15%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
 
   --popover: 0 0% 100%;
-  --popover-foreground: 220 35% 15%;
+  --popover-foreground: 222 47% 11%;
 
-  --muted: 220 15% 94%;
-  --muted-foreground: 220 15% 40%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
 
-  --accent: 42 45% 95%; /* Very light gold tint for hover states */
-  --accent-foreground: 220 35% 15%;
+  --accent: 43 50% 96%;
+  --accent-foreground: 222 47% 11%;
 
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 210 40% 98%;
 
-  --border: 220 15% 90%;
-  --input: 220 15% 90%;
-  --ring: 220 35% 15%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 222.2 84% 4.9%;
 
-  --radius: 0.25rem; /* Small radius for professional look */
+  --radius: 0rem;
 }
 
-/* Custom Utilities for Typography */
-.font-heading {
-  font-family: var(--font-heading);
-  letter-spacing: -0.02em;
+.font-serif {
+  font-family: var(--font-serif);
 }
 
-.text-balance {
-  text-wrap: balance;
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.text-reveal {
+  animation: text-reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+@keyframes text-reveal {
+  0% { transform: translateY(100%); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
 }
