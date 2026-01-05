@@ -8,6 +8,11 @@ const services = [
     icon: Utensils,
   },
   {
+    title: "Coat Check",
+    description: "Organized and professional attendants to manage guest belongings. We provide a seamless check-in and check-out experience for your attendees.",
+    icon: Users,
+  },
+  {
     title: "Event Captains",
     description: "Experienced leaders to oversee the staff and timeline. Essential for larger events to ensure everything runs according to plan.",
     icon: Users,
