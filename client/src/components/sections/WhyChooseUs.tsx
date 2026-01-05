@@ -2,7 +2,7 @@ import { CheckCircle2 } from "lucide-react";
 
 export function WhyChooseUs() {
   const benefits = [
-    { title: "Local Experts", desc: "Specializing in Jersey City, Hoboken, and Hudson County venues." },
+    { title: "Local Experts", desc: "Specializing in premium venues across the New York Metropolitan Area." },
     { title: "Fully Insured", desc: "We carry full liquor liability and general liability insurance for peace of mind." },
     { title: "Professional Training", desc: "Every staff member undergoes rigorous hospitality training." },
     { title: "Reliable Service", desc: "We guarantee our staff will arrive on time and ready to work." },

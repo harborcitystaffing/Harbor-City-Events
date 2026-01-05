@@ -1,14 +1,14 @@
+import logo from "@assets/Screenshot_2026-01-03_at_11.17.59_PM_1767585310539.png";
+
 export function Footer() {
   return (
     <footer className="bg-primary text-white py-12 border-t border-white/10">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="col-span-1 md:col-span-2">
-            <h2 className="text-2xl font-heading font-bold mb-4">
-              HARBOR CITY <span className="text-secondary">EVENT STAFF</span>
-            </h2>
+            <img src={logo} alt="Harbor City Event Staff" className="h-12 w-auto brightness-0 invert mb-4" />
             <p className="text-gray-400 max-w-sm">
-              Providing professional, reliable, and elegant staffing solutions for Hudson County's premier events. Elevate your hospitality experience.
+              Providing professional, reliable, and elegant staffing solutions for the New York Metropolitan Area's premier events. Elevate your hospitality experience.
             </p>
           </div>
           
@@ -25,9 +25,9 @@ export function Footer() {
           <div>
             <h3 className="font-bold text-lg mb-4 text-secondary">Contact</h3>
             <ul className="space-y-2 text-gray-300">
-              <li>Jersey City, NJ</li>
-              <li><a href="tel:2015550123" className="hover:text-white transition-colors">(201) 555-0123</a></li>
-              <li><a href="mailto:events@harborcitystaff.com" className="hover:text-white transition-colors">events@harborcitystaff.com</a></li>
+              <li>New York Metropolitan Area</li>
+              <li><a href="tel:5515541032" className="hover:text-white transition-colors">(551) 554-1032</a></li>
+              <li><a href="mailto:harborcityinfo@gmail.com" className="hover:text-white transition-colors">harborcityinfo@gmail.com</a></li>
             </ul>
           </div>
         </div>

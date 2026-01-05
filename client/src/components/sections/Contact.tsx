@@ -65,8 +65,8 @@ export function Contact() {
                 <div>
                   <h3 className="font-bold text-primary text-lg">Call Us</h3>
                   <p className="text-muted-foreground">For urgent inquiries</p>
-                  <a href="tel:+12015550123" className="text-xl font-bold text-secondary hover:text-primary transition-colors mt-1 block">
-                    (201) 555-0123
+                  <a href="tel:+15515541032" className="text-xl font-bold text-secondary hover:text-primary transition-colors mt-1 block">
+                    (551) 554-1032
                   </a>
                 </div>
               </div>
@@ -78,8 +78,8 @@ export function Contact() {
                 <div>
                   <h3 className="font-bold text-primary text-lg">Email Us</h3>
                   <p className="text-muted-foreground">For general questions</p>
-                  <a href="mailto:events@harborcitystaff.com" className="text-lg font-medium text-primary hover:text-secondary transition-colors mt-1 block">
-                    events@harborcitystaff.com
+                  <a href="mailto:harborcityinfo@gmail.com" className="text-lg font-medium text-primary hover:text-secondary transition-colors mt-1 block">
+                    harborcityinfo@gmail.com
                   </a>
                 </div>
               </div>
@@ -91,7 +91,7 @@ export function Contact() {
                 <div>
                   <h3 className="font-bold text-primary text-lg">Service Area</h3>
                   <p className="text-muted-foreground mt-1">
-                    Jersey City, Hoboken, Bayonne, Weehawken, Union City, and surrounding Hudson County areas.
+                    Serving New York City, Jersey City, Hoboken, and the surrounding New York Metropolitan Area.
                   </p>
                 </div>
               </div>

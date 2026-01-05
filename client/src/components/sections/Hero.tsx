@@ -28,7 +28,7 @@ export function Hero() {
           className="max-w-4xl mx-auto"
         >
           <span className="inline-block py-1 px-3 mb-6 border border-secondary/50 rounded-full text-secondary text-sm font-medium tracking-wider uppercase bg-primary/30 backdrop-blur-sm">
-            Serving Jersey City, Hoboken & Hudson County
+            Serving the New York Metropolitan Area
           </span>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-white mb-6 leading-tight">

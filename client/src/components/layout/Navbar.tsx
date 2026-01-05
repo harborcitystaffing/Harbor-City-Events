@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { useState, useEffect } from "react";
-import { Link } from "wouter";
+import logo from "@assets/Screenshot_2026-01-03_at_11.17.59_PM_1767585310539.png";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -50,10 +50,8 @@ export function Navbar() {
     >
       <div className="container mx-auto flex items-center justify-between">
         <div className="flex items-center gap-2">
-          {/* Logo Text */}
-          <span className={`text-xl font-heading font-bold tracking-tight ${isScrolled ? "text-white" : "text-white"}`}>
-            HARBOR CITY <span className="text-secondary">EVENT STAFF</span>
-          </span>
+          {/* Logo */}
+          <img src={logo} alt="Harbor City Event Staff" className={`h-12 w-auto brightness-0 invert`} />
         </div>
 
         {/* Desktop Nav */}

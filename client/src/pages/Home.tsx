@@ -4,6 +4,7 @@ import { Services } from "@/components/sections/Services";
 import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { Testimonials } from "@/components/sections/Testimonials";
+import { Locations } from "@/components/sections/Locations";
 import { Contact } from "@/components/sections/Contact";
 import { Footer } from "@/components/layout/Footer";
 
@@ -17,6 +18,7 @@ export default function Home() {
         <WhyChooseUs />
         <HowItWorks />
         <Testimonials />
+        <Locations />
         <Contact />
       </main>
       <Footer />
