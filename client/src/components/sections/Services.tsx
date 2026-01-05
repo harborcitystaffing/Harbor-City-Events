@@ -8,11 +8,6 @@ const services = [
     icon: Utensils,
   },
   {
-    title: "Bartenders",
-    description: "Skilled mixologists and bar staff to keep the drinks flowing. From craft cocktails to beer and wine service, we manage the bar so you don't have to.",
-    icon: Wine,
-  },
-  {
     title: "Event Captains",
     description: "Experienced leaders to oversee the staff and timeline. Essential for larger events to ensure everything runs according to plan.",
     icon: Users,
