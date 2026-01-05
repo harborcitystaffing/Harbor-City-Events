@@ -16,6 +16,8 @@ const formSchema = z.object({
   phone: z.string().min(10, "Phone number is required"),
   eventType: z.string().min(1, "Please select an event type"),
   date: z.string().min(1, "Date is required"),
+  location: z.string().min(1, "Location is required"),
+  staffNeeded: z.string().min(1, "Staff details are required"),
   guestCount: z.string().min(1, "Guest count is required"),
   details: z.string().optional(),
 });
@@ -30,6 +32,8 @@ export function Contact() {
       phone: "",
       eventType: "",
       date: "",
+      location: "",
+      staffNeeded: "",
       guestCount: "",
       details: "",
     },
@@ -175,6 +179,35 @@ export function Contact() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <FormField
                       control={form.control}
+                      name="location"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Event Location</FormLabel>
+                          <FormControl>
+                            <Input placeholder="Venue name or city" {...field} className="bg-slate-50 border-slate-200" />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    <FormField
+                      control={form.control}
+                      name="staffNeeded"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Staff Needed</FormLabel>
+                          <FormControl>
+                            <Input placeholder="e.g. 4 Servers, 1 Captain" {...field} className="bg-slate-50 border-slate-200" />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <FormField
+                      control={form.control}
                       name="date"
                       render={({ field }) => (
                         <FormItem>
@@ -206,10 +239,10 @@ export function Contact() {
                     name="details"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Additional Details (Location, Staff needed, etc.)</FormLabel>
+                        <FormLabel>Additional Details</FormLabel>
                         <FormControl>
                           <Textarea 
-                            placeholder="Please tell us more about your staffing needs..." 
+                            placeholder="Please tell us more about your event..." 
                             className="resize-none bg-slate-50 border-slate-200" 
                             rows={4}
                             {...field} 
