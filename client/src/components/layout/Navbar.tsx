@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { useState, useEffect } from "react";
-import logo from "@assets/Screenshot_2026-01-03_at_11.17.59_PM_1767585310539.png";
+import logo from "@assets/Screenshot_2026-01-03_at_11.17.59_PM_1767585508261.jpeg";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
