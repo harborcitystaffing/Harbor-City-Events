@@ -36,12 +36,12 @@ export function Hero() {
               Bespoke Hospitality & Staffing
             </span>
             
-            <h1 className="text-5xl md:text-8xl font-serif text-white mb-8 leading-[1.1] tracking-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-8xl font-serif text-white mb-8 leading-[1.1] tracking-tight">
               Elegance <span className="italic text-secondary">In Every</span> <br />
               Movement.
             </h1>
             
-            <p className="text-lg md:text-2xl text-white/60 mb-12 max-w-2xl leading-relaxed font-light">
+            <p className="text-base sm:text-lg md:text-2xl text-white/60 mb-12 max-w-2xl leading-relaxed font-light">
               Crafting seamless guest experiences for the New York Metropolitan Area's most distinguished private and corporate occasions.
             </p>
             

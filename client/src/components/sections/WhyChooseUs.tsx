@@ -1,4 +1,4 @@
-import { CheckCircle2 } from "lucide-react";
+import { Quote } from "lucide-react";
 
 export function WhyChooseUs() {
   const benefits = [
@@ -11,45 +11,51 @@ export function WhyChooseUs() {
   ];
 
   return (
-    <section id="why-us" className="py-24 bg-slate-50">
-      <div className="container mx-auto">
-        <div className="flex flex-col lg:flex-row gap-16 items-center">
-          <div className="lg:w-1/2">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">
-              Why Harbor City Event Staff?
+    <section id="why-us" className="py-20 md:py-32 bg-slate-50 relative overflow-hidden">
+      {/* Decorative text for mobile background */}
+      <div className="absolute -left-10 top-20 text-[120px] font-serif text-primary/5 select-none pointer-events-none whitespace-nowrap hidden sm:block">
+        Excellence Excellence Excellence
+      </div>
+      
+      <div className="container mx-auto px-6">
+        <div className="flex flex-col lg:flex-row gap-16 lg:items-center">
+          <div className="lg:w-1/2 relative z-10">
+            <span className="text-secondary font-bold tracking-[0.3em] uppercase text-xs mb-4 block">The Philosophy</span>
+            <h2 className="text-3xl md:text-5xl font-serif text-primary mb-8 leading-tight">
+              Why Harbor City?
             </h2>
-            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+            <p className="text-base md:text-lg text-muted-foreground mb-12 leading-relaxed font-light">
               We understand that the quality of service can make or break an event. That's why we don't just send bodies—we provide hospitality professionals who care about your guest experience.
             </p>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-8 gap-x-12">
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-secondary shrink-0 mt-0.5" />
-                  <div>
-                    <h3 className="font-semibold text-primary text-lg">{benefit.title}</h3>
-                    <p className="text-sm text-muted-foreground mt-1">{benefit.desc}</p>
+                <div key={index} className="group">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-1 h-1 rounded-full bg-secondary group-hover:w-4 transition-all duration-300" />
+                    <h3 className="font-bold text-primary text-sm uppercase tracking-widest">{benefit.title}</h3>
                   </div>
+                  <p className="text-sm text-muted-foreground leading-relaxed font-light">{benefit.desc}</p>
                 </div>
               ))}
             </div>
           </div>
           
           <div className="lg:w-1/2 relative">
-             <div className="absolute -inset-4 border-2 border-secondary/30 rounded-lg transform translate-x-4 translate-y-4 -z-10"></div>
-             <div className="bg-primary p-12 rounded-lg text-white shadow-2xl relative overflow-hidden">
-                <div className="absolute top-0 right-0 -mt-10 -mr-10 w-40 h-40 bg-secondary/20 rounded-full blur-3xl"></div>
-                <h3 className="text-2xl font-heading font-bold mb-4 relative z-10">The Harbor City Standard</h3>
-                <p className="text-gray-300 relative z-10 mb-6">
-                  "Our mission is to bring a level of white-glove service typically reserved for high-end Manhattan venues to the Jersey City waterfront."
+             <div className="absolute -inset-4 border border-secondary/20 rounded-none transform translate-x-4 translate-y-4 -z-10"></div>
+             <div className="bg-primary p-8 sm:p-16 rounded-none text-white shadow-3xl relative overflow-hidden">
+                <div className="absolute top-0 right-0 -mt-10 -mr-10 w-40 h-40 bg-secondary/10 rounded-full blur-3xl"></div>
+                <Quote className="w-12 h-12 text-secondary/20 mb-8" />
+                <p className="text-xl sm:text-2xl font-serif italic mb-10 leading-relaxed text-white/90">
+                  "Our mission is to bring a level of white-glove service typically reserved for high-end Manhattan venues to the finest events across the region."
                 </p>
-                <div className="flex items-center gap-4 relative z-10">
-                  <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center font-serif text-primary font-bold text-xl">
+                <div className="flex items-center gap-6 pt-8 border-t border-white/10">
+                  <div className="w-14 h-14 bg-secondary flex items-center justify-center font-serif text-primary font-bold text-xl">
                     HC
                   </div>
                   <div>
-                    <p className="font-bold text-white">James O'Connor</p>
-                    <p className="text-secondary text-sm">Founder & Director</p>
+                    <p className="font-bold text-white tracking-widest uppercase text-xs">The Director</p>
+                    <p className="text-secondary text-xs mt-1 uppercase tracking-widest">Harbor City Standard</p>
                   </div>
                 </div>
              </div>
