@@ -25,7 +25,8 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      "@": path.resolve(import.meta.dirname, "client", "src"),
+      // Updated: Points to the current folder's src since files were moved
+      "@": path.resolve(import.meta.dirname, "src"),
       "@shared": path.resolve(import.meta.dirname, "shared"),
       "@assets": path.resolve(import.meta.dirname, "attached_assets"),
     },
@@ -35,9 +36,11 @@ export default defineConfig({
       plugins: [],
     },
   },
-  root: path.resolve(import.meta.dirname, "client"),
+  // Updated: Tells Vite index.html is in the project root now
+  root: import.meta.dirname,
   build: {
-    outDir: path.resolve(import.meta.dirname, "dist/public"),
+    // Updated: Vercel looks for 'dist' by default
+    outDir: "dist",
     emptyOutDir: true,
   },
   server: {
