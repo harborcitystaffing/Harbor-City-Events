@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { useState, useEffect } from "react";
-import logo from "@assets/generated_images/minimalist_luxury_event_staffing_logo.png";
+import logo from "@assets/generated_images/hc_elegant_logo.png";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -50,6 +50,7 @@ export function Navbar() {
     >
       <div className="container mx-auto flex items-center justify-between px-6 lg:px-12">
         <div className="flex items-center gap-4 cursor-pointer" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
+          {/* Logo with updated import and restored mix-blend-multiply */}
           <img src={logo} alt="Harbor City" className="h-10 w-auto mix-blend-multiply" />
           <div className="block">
             <span className="block text-sm font-bold tracking-[0.3em] uppercase leading-none">Harbor City</span>
