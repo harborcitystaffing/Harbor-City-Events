@@ -24,13 +24,17 @@ export function Footer() {
                 Instagram
               </a>
               <a 
-                href="#" 
+                href="https://www.linkedin.com/company/harbor-city-staffing/about/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
                 className="text-[10px] uppercase tracking-[0.3em] font-bold text-white/60 hover:text-secondary transition-colors"
               >
                 LinkedIn
               </a>
               <a 
                 href="#" 
+                target="_blank" 
+                rel="noopener noreferrer" 
                 className="text-[10px] uppercase tracking-[0.3em] font-bold text-white/60 hover:text-secondary transition-colors"
               >
                 Facebook
