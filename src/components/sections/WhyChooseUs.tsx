@@ -43,19 +43,34 @@ export function WhyChooseUs() {
           
           <div className="lg:w-1/2 relative">
              <div className="absolute -inset-4 border border-secondary/20 rounded-none transform translate-x-4 translate-y-4 -z-10"></div>
-             <div className="bg-primary p-8 sm:p-16 rounded-none text-white shadow-3xl relative overflow-hidden">
+             <div className="bg-primary p-8 sm:p-12 rounded-none text-white shadow-3xl relative overflow-hidden">
                 <div className="absolute top-0 right-0 -mt-10 -mr-10 w-40 h-40 bg-secondary/10 rounded-full blur-3xl"></div>
                 <Quote className="w-12 h-12 text-secondary/20 mb-8" />
                 <p className="text-xl sm:text-2xl font-serif italic mb-10 leading-relaxed text-white/90">
                   "Our mission is to bring a level of white-glove service typically reserved for high-end Manhattan venues to the finest events across the region."
                 </p>
-                <div className="flex items-center gap-6 pt-8 border-t border-white/10">
-                  <div className="w-14 h-14 bg-secondary flex items-center justify-center font-serif text-primary font-bold text-xl">
-                    HC
+                
+                <div className="space-y-8 pt-8 border-t border-white/10">
+                  {/* Founder */}
+                  <div className="flex items-center gap-6">
+                    <div className="w-12 h-12 bg-secondary flex items-center justify-center font-serif text-primary font-bold text-lg">
+                      OS
+                    </div>
+                    <div>
+                      <p className="font-bold text-white tracking-widest uppercase text-xs">Obaid Syed</p>
+                      <p className="text-secondary text-[10px] mt-1 uppercase tracking-widest font-bold">Founder</p>
+                    </div>
                   </div>
-                  <div>
-                    <p className="font-bold text-white tracking-widest uppercase text-xs">Alexander Vance</p>
-                    <p className="text-secondary text-xs mt-1 uppercase tracking-widest">Director of Operations</p>
+
+                  {/* Co-Founder */}
+                  <div className="flex items-center gap-6">
+                    <div className="w-12 h-12 bg-secondary flex items-center justify-center font-serif text-primary font-bold text-lg">
+                      ZK
+                    </div>
+                    <div>
+                      <p className="font-bold text-white tracking-widest uppercase text-xs">Zainuddin Khan</p>
+                      <p className="text-secondary text-[10px] mt-1 uppercase tracking-widest font-bold">Co-Founder</p>
+                    </div>
                   </div>
                 </div>
              </div>
