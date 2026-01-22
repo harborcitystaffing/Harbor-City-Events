@@ -32,7 +32,7 @@ export function Footer() {
                 LinkedIn
               </a>
               <a 
-                href="#" 
+                href="https://www.facebook.com/profile.php?id=61586817336693" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="text-[10px] uppercase tracking-[0.3em] font-bold text-white/60 hover:text-secondary transition-colors"
