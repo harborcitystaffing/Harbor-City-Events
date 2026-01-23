@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import { Navbar } from "@/components/layout/Navbar";
 import { Hero } from "@/components/sections/Hero";
 import { Services } from "@/components/sections/Services";
@@ -10,34 +10,24 @@ import { Contact } from "@/components/sections/Contact";
 import { Footer } from "@/components/layout/Footer";
 
 export default function Home() {
-  useEffect(() => {
-    const hash = window.location.hash;
-    if (hash) {
-      const targetId = hash.replace("#", "");
-      
-      // This logic checks for the contact section every 100ms
-      // It stops once it finds the section or after 2 seconds (20 attempts)
-      let attempts = 0;
-      const scrollInterval = setInterval(() => {
-        const element = document.getElementById(targetId);
-        
-        if (element) {
-          element.scrollIntoView({ behavior: "smooth" });
-          clearInterval(scrollInterval);
-        }
-        
-        attempts++;
-        if (attempts >= 20) {
-          clearInterval(scrollInterval);
-        }
-      }, 100);
-
-      return () => clearInterval(scrollInterval);
-    }
-  }, []);
-
   return (
     <div className="min-h-screen bg-background font-sans text-foreground">
+      <Helmet>
+        {/* This is the main title that appears in Google Search results */}
+        <title>Harbor City Event Staff | Premium Staffing Services in NJ</title>
+        
+        {/* This description shows up under your link in Google */}
+        <meta 
+          name="description" 
+          content="Harbor City Event Staff provides professional, reliable staffing for corporate events, private parties, and weddings throughout New Jersey. Elevate your next event with our expert team." 
+        />
+        
+        {/* These tags help your site look professional when shared on social media or iMessage */}
+        <meta property="og:title" content="Harbor City Event Staff | NJ" />
+        <meta property="og:description" content="Professional event staffing services for any occasion in New Jersey." />
+        <meta property="og:type" content="website" />
+      </Helmet>
+
       <Navbar />
       <main>
         <Hero />
