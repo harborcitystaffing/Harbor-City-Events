@@ -34,7 +34,7 @@ export default function Home() {
   <meta property="og:url" content="https://harborcitystaffing.com" />
   
   {/* The Image Tags with Cache Buster */}
-  <meta property="og:image" content="https://harborcitystaffing.com/opengraph.jpg?v=1" />
+  <meta name="og:image" content="https://harborcitystaffing.com/opengraph.jpg?v=1" />
   <meta property="og:image:width" content="1280" />
   <meta property="og:image:height" content="720" />
   
