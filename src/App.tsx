@@ -4,7 +4,7 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { Helmet } from "react-helmet-async";
 import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/react";
+import { SpeedInsights } from "@vercel/speed-insights/react"; // Correct import for React
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
 
@@ -20,18 +20,16 @@ function Router() {
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      {/* This section controls how Google sees your site */}
+      {/* SEO Metadata */}
       <Helmet>
         <title>Harbor City Event Staff | Premium NJ Event Staffing</title>
         <meta 
           name="description" 
-          content="Professional event staffing for corporate events, private parties, and venues in New Jersey. Quality service you can trust." 
+          content="Professional event staffing for corporate events, private parties, and venues in New Jersey. Reliable staffing solutions." 
         />
-        <meta property="og:title" content="Harbor City Event Staffing" />
-        <meta property="og:description" content="Premium event staffing in New Jersey." />
       </Helmet>
       
-      {/* Your Page Content */}
+      {/* Website Content */}
       <Router />
       <Toaster />
 
