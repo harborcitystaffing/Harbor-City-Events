@@ -1,12 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu } from "lucide-react";
 import { useState, useEffect } from "react";
-import logo from "@assets/generated_images/hc_elegant_logo.png";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
-  // Add state to control if the mobile menu is open
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
@@ -31,7 +28,6 @@ export function Navbar() {
 
     const handleClick = (id: string) => {
       scrollToSection(id);
-      // Close the menu after clicking a link
       if (closeMenu) closeMenu();
     };
 
@@ -52,11 +48,23 @@ export function Navbar() {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between px-6 lg:px-12">
-        <div className="flex items-center gap-4 cursor-pointer" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
-          <img src={logo} alt="Harbor City" className="h-10 w-auto mix-blend-multiply" />
+        {/* NEW LOGO & BRAND SECTION */}
+        <div 
+          className="flex items-center gap-3 cursor-pointer" 
+          onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
+        >
+          <img 
+            src="/logo1.png" 
+            alt="Harbor City Icon" 
+            className="h-8 md:h-10 w-auto object-contain" 
+          />
           <div className="block">
-            <span className="block text-sm font-bold tracking-[0.3em] uppercase leading-none">Harbor City</span>
-            <span className="block text-[10px] tracking-[0.4em] uppercase text-secondary font-medium mt-1">Event Staffing</span>
+            <span className="block text-sm font-bold tracking-[0.3em] uppercase leading-none text-primary">
+              Harbor City
+            </span>
+            <span className="block text-[10px] tracking-[0.4em] uppercase text-secondary font-medium mt-1">
+              Event Staffing
+            </span>
           </div>
         </div>
 
@@ -73,7 +81,6 @@ export function Navbar() {
 
         {/* Mobile Nav */}
         <div className="lg:hidden">
-          {/* Link the Sheet's open state to our isOpen variable */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className="text-primary hover:bg-transparent">
@@ -87,7 +94,6 @@ export function Navbar() {
             <SheetContent side="right" className="w-full sm:w-[400px] border-none bg-white p-12">
               <div className="flex flex-col h-full justify-between">
                 <div className="mt-12">
-                  {/* Pass setIsOpen(false) to the closeMenu prop */}
                   <NavLinks mobile closeMenu={() => setIsOpen(false)} />
                 </div>
                 <div className="space-y-8">
