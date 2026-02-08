@@ -44,19 +44,19 @@ export function Navbar() {
   return (
     <nav 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
-        isScrolled ? "bg-white/80 backdrop-blur-md py-4 border-b border-primary/5 shadow-sm" : "bg-transparent py-8"
+        isScrolled ? "bg-white/90 backdrop-blur-md py-3 border-b border-primary/5 shadow-sm" : "bg-transparent py-6"
       }`}
     >
       <div className="container mx-auto flex items-center justify-between px-6 lg:px-12">
-        {/* LOGO SECTION - RESTORED SIZE + TIGHTER GAP */}
+        {/* NEW CIRCULAR LOGO SECTION */}
         <div 
-          className="flex items-center gap-1.5 cursor-pointer" 
+          className="flex items-center gap-3 cursor-pointer" 
           onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
         >
           <img 
-            src="/logo1.png" 
-            alt="Harbor City Icon" 
-            className="h-10 md:h-12 w-auto object-contain" 
+            src="/logo-circle.png" 
+            alt="Harbor City Logo" 
+            className="h-10 md:h-12 w-auto rounded-full shadow-sm" 
           />
           <div className="block">
             <span className="block text-sm font-bold tracking-[0.3em] uppercase leading-none text-primary">
