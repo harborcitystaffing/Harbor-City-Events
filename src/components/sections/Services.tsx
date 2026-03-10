@@ -58,7 +58,7 @@ export function Services() {
         
         <div className="mt-16 md:mt-32 flex flex-col lg:flex-row items-center justify-between border-t border-primary/5 pt-12 gap-8">
           <div className="flex items-baseline gap-4">
-            <span className="text-4xl md:text-5xl font-serif text-primary">45</span>
+            <span className="text-4xl md:text-5xl font-serif text-primary">30</span>
             <div className="flex flex-col">
               <span className="text-[10px] uppercase tracking-widest font-bold text-secondary">Starting at</span>
               <span className="text-xs font-medium text-muted-foreground">$ / per hour</span>
