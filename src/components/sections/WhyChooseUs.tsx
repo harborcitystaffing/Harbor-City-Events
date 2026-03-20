@@ -55,10 +55,10 @@ export function WhyChooseUs() {
                   </div>
                   <div>
                     <p className="font-bold text-white tracking-widest uppercase text-xs">
-                      Obaid Syed & Zainuddin Khan
+                      Ahmad Ali
                     </p>
                     <p className="text-secondary text-[10px] mt-1 uppercase tracking-[0.2em] font-bold">
-                      Founder & Co-Founder
+                      Outreach Coordinator
                     </p>
                   </div>
                 </div>
